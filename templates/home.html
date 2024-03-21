@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="static/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Cupcakes</title>
+  </head>
+  <body>
+    <h1>Cupcakes!!</h1>
+    <div class="container">
+      <ul class="cupcakes"></ul>
+    </div>
+    <h2>Add a new cupcake</h2>
+    <div class="container">
+      <form id="cupcake-form">
+        <div>
+          <label for="form-flavor">Flavor: </label>
+          <input name="flavor" id="form-flavor"/>
+        </div>
+        <div>
+          <label for="form-size">Size: </label>
+          <input name="size" id="form-size"/>
+        </div>
+        <div>
+          <label for="form-rating">Rating: </label>
+          <input type="number" name="rating" id="form-rating"/>
+        </div>
+        <div>
+          <label for="form-image">Image: </label>
+          <input name="image" id="form-image"/>
+        </div>
+        <button>Bake!</button>
+      </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script src="static/app.js"></script>
+  </body>
+</html>

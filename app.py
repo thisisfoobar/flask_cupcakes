@@ -2,8 +2,10 @@
 
 from flask import Flask, request, redirect, render_template, flash, get_flashed_messages, jsonify
 from models import db, connect_db, Cupcake
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///cupcakes'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_ECHO'] = True
@@ -92,3 +94,9 @@ def delete_cupcake(cupcake_id):
     db.session.commit()
 
     return jsonify(message="Deleted")
+
+@app.route("/")
+def home_page():
+    """Render home page"""
+
+    return render_template("home.html")
